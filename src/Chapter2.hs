@@ -13,7 +13,7 @@ ex22_1 (DoubleB p) = "b" ++ ex22_1 p ++ "b"
 ex22_pal1 :: Pal
 ex22_pal1 = DoubleA $ DoubleB $ DoubleA PalEmpty
 ex22_pal2 :: Pal
-ex22_pal2 = DoubleB $ DoubleA $ PalA
+ex22_pal2 = DoubleB $ DoubleA PalA
 
 ex22_2 :: Pal -> Int
 ex22_2 PalEmpty = 0
@@ -48,9 +48,9 @@ ex23_3 (MirDouble l m) = case l of
 data Parity = Ones Parity | Left0 Parity | Right0 Parity | Empty
 
 ex24_aEven1 :: Parity
-ex24_aEven1 = Left0 $ Left0 $ Ones $ Left0 $ Empty
+ex24_aEven1 = Left0 $ Left0 $ Ones $ Left0 Empty
 ex24_aEven2 :: Parity
-ex24_aEven2 = Left0 $ Right0 $ Ones $ Left0 $ Empty
+ex24_aEven2 = Left0 $ Right0 $ Ones $ Left0 Empty
 
 ex24_2 :: Parity -> String
 ex24_2 Empty = ""
